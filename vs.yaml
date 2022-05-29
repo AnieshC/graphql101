@@ -1,0 +1,28 @@
+apiVersion: gateway.solo.io/v1
+kind: VirtualService
+metadata:
+  name: 'default'
+  namespace: 'gloo-system'
+spec:
+  virtualHost:
+    domains:
+    - '*'
+    routes:
+    - matchers:
+       - methods:
+          - GET
+         prefix: /test
+      routeAction:
+          single:
+            upstream:
+              name: json-upstream
+              namespace: gloo-system
+      options:
+        autoHostRewrite: true
+    - graphqlApiRef:
+        name: bookinfo-graphql
+        namespace: gloo-system
+      matchers:
+       - methods:
+          - POST      
+         prefix: /graphql
