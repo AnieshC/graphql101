@@ -86,7 +86,7 @@ spec:
       type Product {
         """Unique identifier for books"""
       id: String
-      """The book title"""
+       
       title: String
       """Description of a book in HTML"""
       descriptionHtml: String

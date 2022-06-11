@@ -23,6 +23,7 @@ spec:
         name: bookinfo-graphql
         namespace: gloo-system
       matchers:
-       - methods:
-          - POST      
-         prefix: /graphql
+#       - methods:
+#          - POST      
+#         prefix: /graphql
+      - prefix: /graphql

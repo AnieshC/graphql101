@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "apollo-datasource-rest": "^3.6.0",
+    "apollo-server": "^3.8.2",
+    "gql": "^1.1.2"
+  }
+}
